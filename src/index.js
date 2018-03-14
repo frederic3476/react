@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
-//simple fonction de rendu sans state
+//fonction de rendu : react component qui renvoi un react element
 function Square(props) {
     return (
       <button className="square" onClick={props.onClick}>
@@ -127,6 +127,7 @@ function calculateWinner(squares) {
       return (
         <div className="game">
           <div className="game-board">
+          <h1>{this.props.title}</h1>
             <Board
               squares={current.squares}
               onClick={(i) => this.handleClick(i)}
@@ -144,6 +145,6 @@ function calculateWinner(squares) {
   // ========================================
   
   ReactDOM.render(
-    <Game />,
+    <Game title="Grand jeu du morpion"/>,
     document.getElementById('root')
   );
